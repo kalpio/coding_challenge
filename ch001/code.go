@@ -17,10 +17,6 @@ func solve(boxes []int) int {
 		return boxes[0]
 	}
 
-	if len(boxes) == 2 {
-		return max(boxes[0]-boxes[1], boxes[1]-boxes[0])
-	}
-
 	key := getKey(boxes)
 	if _, ok := cache[key]; ok {
 		return cache[key]
